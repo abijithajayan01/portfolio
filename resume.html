@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume - Abijith Ajayan | Lead Full Stack & Python GenAI Engineer</title>
+  <meta name="description" content="Official technical resume of Abijith Ajayan - Lead Full Stack & Python GenAI Engineer with 10 years experience.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #070a12;
+      --card-bg: #0e1526;
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --accent: #2dd4bf;
+      --border: rgba(255, 255, 255, 0.1);
+      --font-sans: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      padding: 40px 20px;
+    }
+
+    .resume-container {
+      max-width: 860px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 48px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    }
+
+    .resume-actions-bar {
+      max-width: 860px;
+      margin: 0 auto 20px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background: #14b8a6;
+      color: #041017;
+    }
+    .btn-primary:hover { background: #2dd4bf; }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      border: 1px solid var(--border);
+    }
+    .btn-secondary:hover { background: rgba(255, 255, 255, 0.15); }
+
+    /* Header */
+    .r-header {
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 28px;
+      margin-bottom: 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .r-name {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.02em;
+    }
+
+    .r-title {
+      font-size: 1.1rem;
+      color: var(--accent);
+      font-weight: 600;
+      font-family: var(--font-mono);
+      margin-top: 4px;
+    }
+
+    .r-contacts {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+    }
+
+    .r-contacts a {
+      color: var(--text);
+      text-decoration: none;
+    }
+    .r-contacts a:hover { color: var(--accent); }
+
+    /* Sections */
+    .r-section {
+      margin-bottom: 32px;
+    }
+
+    .r-section-title {
+      font-size: 1rem;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin-bottom: 16px;
+      border-left: 3px solid var(--accent);
+      padding-left: 10px;
+    }
+
+    .r-summary {
+      font-size: 0.98rem;
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    /* Experience Item */
+    .exp-item {
+      margin-bottom: 24px;
+    }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      margin-bottom: 6px;
+    }
+
+    .exp-role {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .exp-period {
+      font-size: 0.84rem;
+      font-family: var(--font-mono);
+      color: var(--text-muted);
+    }
+
+    .exp-company {
+      font-size: 0.92rem;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .exp-bullets {
+      list-style-position: inside;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 0.92rem;
+      color: #cbd5e1;
+    }
+
+    .exp-bullets strong {
+      color: #fff;
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    @media (max-width: 600px) {
+      .skills-grid { grid-template-columns: 1fr; }
+      .resume-container { padding: 24px 18px; }
+    }
+
+    .skill-cat {
+      background: rgba(8, 12, 22, 0.6);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px;
+    }
+
+    .skill-cat-title {
+      font-size: 0.85rem;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    .skill-cat-tags {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+    }
+
+    /* Print Styles */
+    @media print {
+      body {
+        background: #ffffff !important;
+        color: #0f172a !important;
+        padding: 0 !important;
+      }
+      .resume-actions-bar {
+        display: none !important;
+      }
+      .resume-container {
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+        color: #0f172a !important;
+      }
+      .r-name, .exp-role, .exp-bullets strong {
+        color: #000000 !important;
+      }
+      .r-title, .r-section-title, .exp-company, .skill-cat-title {
+        color: #0f766e !important;
+      }
+      .r-contacts, .exp-period, .skill-cat-tags {
+        color: #475569 !important;
+      }
+      .skill-cat {
+        border: 1px solid #cbd5e1 !important;
+        background: #f8fafc !important;
+      }
+      .exp-bullets {
+        color: #1e293b !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Actions Bar -->
+  <div class="resume-actions-bar">
+    <a href="./index.html" class="btn btn-secondary">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      Back to Portfolio
+    </a>
+
+    <div style="display: flex; gap: 10px;">
+      <button onclick="window.print()" class="btn btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+        Print / Save as PDF
+      </button>
+      <a href="mailto:abijithajayan01@gmail.com?subject=Contract%20Inquiry%20via%20Resume" class="btn btn-secondary">
+        Contact Abijith
+      </a>
+    </div>
+  </div>
+
+  <div class="resume-container">
+    <!-- Header -->
+    <header class="r-header">
+      <div>
+        <h1 class="r-name">Abijith Ajayan</h1>
+        <div class="r-title">Lead Full Stack & Python GenAI Engineer</div>
+        <div style="font-size: 0.88rem; color: var(--text-muted); margin-top: 6px;">
+          Bangalore / Kochi, India • Dedicated Overlap with US/UK/EU Remote Teams
+        </div>
+      </div>
+
+      <div class="r-contacts">
+        <div>Email: <a href="mailto:abijithajayan01@gmail.com">abijithajayan01@gmail.com</a></div>
+        <div>Phone: <a href="tel:+919605780704">+91 9605780704</a></div>
+        <div>LinkedIn: <a href="https://www.linkedin.com/in/abijith-ajayan-344909187" target="_blank">abijith-ajayan-344909187</a></div>
+        <div>Web: <a href="./index.html">abijith-portfolio.vercel.app</a></div>
+      </div>
+    </header>
+
+    <!-- Executive Summary -->
+    <section class="r-section">
+      <h2 class="r-section-title">Executive Summary</h2>
+      <p class="r-summary">
+        Principal-level Full Stack and Python GenAI Architect with <strong>10 years of commercial software engineering experience</strong>. Specialized in high-scale SaaS architectures, automated high-throughput data pipelines (2.5M+ records), and autonomous AI voice/chat systems with sub-second streaming latencies. Proven track record collaborating seamlessly with US, UK, European, and GCC clients delivering production-grade microservices, Core Web Vitals optimization, and robust MySQL performance tuning.
+      </p>
+    </section>
+
+    <!-- Core Competencies -->
+    <section class="r-section">
+      <h2 class="r-section-title">Technical Competencies Matrix</h2>
+      <div class="skills-grid">
+        <div class="skill-cat">
+          <div class="skill-cat-title">Backend & Microservices</div>
+          <div class="skill-cat-tags">Python (FastAPI, AsyncIO), PHP (Laravel, CodeIgniter), RESTful APIs, Webhooks, Celery, Distributed Task Queues</div>
+        </div>
+        <div class="skill-cat">
+          <div class="skill-cat-title">AI & Voice Engineering</div>
+          <div class="skill-cat-tags">RAG Pipelines, ElevenLabs, Sarvam AI Voice, Google Gemini API, OpenAI GPT-4 Turbo, Vector Embeddings (Chroma, Milvus)</div>
+        </div>
+        <div class="skill-cat">
+          <div class="skill-cat-title">Frontend & Mobile</div>
+          <div class="skill-cat-tags">Angular (Versions 2 through 21), TypeScript, RxJS, Ionic Mobile, Micro-Frontends, Modern CSS3, WebSockets</div>
+        </div>
+        <div class="skill-cat">
+          <div class="skill-cat-title">Data, Storage & Cloud Ops</div>
+          <div class="skill-cat-tags">MySQL Query Profiling & Master-Slave Replication, Web Scraping (Playwright/Scrapy), SHA-256 Deduplication, Docker, Linux, CI/CD</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Flagship Systems & Production Experience -->
+    <section class="r-section">
+      <h2 class="r-section-title">Flagship Production Systems & Experience</h2>
+
+      <!-- Role 1 -->
+      <article class="exp-item">
+        <div class="exp-header">
+          <div class="exp-role">Lead Full Stack & GenAI Architect</div>
+          <div class="exp-period">2022 – Present</div>
+        </div>
+        <div class="exp-company">Conversational AI & Enterprise Voice Solutions</div>
+        <ul class="exp-bullets">
+          <li>Architected an autonomous conversational voice and web AI suite using <strong>FastAPI, Sarvam AI, and ElevenLabs</strong>, achieving sub-680ms voice turn-taking.</li>
+          <li>Engineered automated website URL crawling and dynamic RAG pipelines grounding AI agent responses on live client data with zero hallucinations.</li>
+          <li>Built an Angular enterprise management dashboard enabling multi-tenant client admins to tweak agent prompt personas, voice models, and inspect real-time call telemetry.</li>
+          <li>Reduced tier-1 customer support operational overhead by <strong>68%</strong> across 12,000+ monthly calls.</li>
+        </ul>
+      </article>
+
+      <!-- Role 2 -->
+      <article class="exp-item">
+        <div class="exp-header">
+          <div class="exp-role">Principal Backend & Data Pipeline Engineer</div>
+          <div class="exp-period">2020 – 2022</div>
+        </div>
+        <div class="exp-company">High-Scale Real Estate Data Ingestion & ETL Infrastructure</div>
+        <ul class="exp-bullets">
+          <li>Constructed overnight distributed Python scrapers that harvested and normalized over <strong>2,500,000+ property records</strong> across heterogeneous portals.</li>
+          <li>Engineered an automated Pillow & OpenCV streaming image optimization pipeline forcing all uploaded photos strictly <strong>under 150 KB</strong>, slashing cloud storage costs by 85%.</li>
+          <li>Implemented SHA-256 cryptographic image and text deduplication, eliminating redundant database writes with 99.9% precision.</li>
+          <li>Created a real-time Streamlit telemetry dashboard for DevOps engineers to monitor worker health, proxy rotation, and ingestion throughput.</li>
+        </ul>
+      </article>
+
+      <!-- Role 3 -->
+      <article class="exp-item">
+        <div class="exp-header">
+          <div class="exp-role">Lead Full Stack SaaS Architect</div>
+          <div class="exp-period">2017 – 2020</div>
+        </div>
+        <div class="exp-company">SiteCRM - Multi-Tenant Real Estate Sales Engine</div>
+        <ul class="exp-bullets">
+          <li>Architected a multi-tenant real estate sales CRM running on <strong>Angular, Laravel, and MySQL</strong>, serving 100+ broker and builder tenant organizations.</li>
+          <li>Integrated Meta Lead Ads Graph Webhooks streaming paid ad leads into the CRM queue within 800 milliseconds of user form submission.</li>
+          <li>Designed an SLA-driven automated lead redistribution engine that reassigns leads to the next available agent if not contacted within 90 seconds.</li>
+          <li>Embedded cloud telephony click-to-dial functionality with automated two-way call recording and timestamped agent disposition logs.</li>
+        </ul>
+      </article>
+
+      <!-- Role 4 -->
+      <article class="exp-item">
+        <div class="exp-header">
+          <div class="exp-role">Senior Software Engineer</div>
+          <div class="exp-period">2014 – 2017</div>
+        </div>
+        <div class="exp-company">Omnichannel Social Publishing & Cloud Telephony Systems</div>
+        <ul class="exp-bullets">
+          <li>Engineered unified scheduling and analytics microservices connecting YouTube, LinkedIn, Meta, X, and Threads via Graph APIs.</li>
+          <li>Built strict role-based approval state machines (Junior Executive -> Team Lead -> Admin sign-off) preventing unvetted brand posts.</li>
+          <li>Tuned high-throughput MySQL database instances with master-slave replication and composite query indexes, reducing p99 latency by 55%.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Education & Certifications -->
+    <section class="r-section" style="margin-bottom: 0;">
+      <h2 class="r-section-title">Education & Credentials</h2>
+      <div style="font-size: 0.92rem; color: #cbd5e1;">
+        <div style="font-weight: 700; color: #fff;">Bachelor of Technology / Engineering in Computer Science</div>
+        <div style="color: var(--text-muted); font-size: 0.85rem; margin-top: 2px;">
+          10+ Years Continuous Full-Time Commercial Software Architecture & Hands-on Production Delivery
+        </div>
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>
